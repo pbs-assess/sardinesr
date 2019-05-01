@@ -1,27 +1,25 @@
 ---
-title: "Title Here (*Latin Species Name*)"
-title_short: "Short Title"
+title: "HARVEST ADVICE FOR PACIFIC SARDINE (*SARDINOPS SAGAX*) IN BRITISH COLUMBIA WATERS FOR 2018 SEASON"
+title_short: "HARVEST ADVICE FOR PACIFIC SARDINE (*SARDINOPS SAGAX*) IN BRITISH COLUMBIA WATERS FOR 2018 SEASON"
 title_other: "Titre Ici (*Nom Latin*)"
-year: 20XX
-month: January
+year: 2019
+month: May
 report_number: nnn
 approver: |
-  Approver Name\\
-  Regional Director\\
-  Science Branch, Your Region\\
+  Carmale Lowe\
+  Regional Director\
+  Science Branch, Pacific Region\
   Fisheries and Oceans Canada
-approval_year: 20XX
-approval_month: January
-approval_day: 01
+approval_year: 2019
+approval_month: May
+approval_day: XX
 branch: Science Branch
 region: Pacific Region
 address: |
   ^1^Pacific Biological Station\
      Fisheries and Oceans Canada, 3190 Hammond Bay Road\
-     Nanaimo, British Columbia, V9T 6N7, Canada\
-  ^2^Far, far away\
-     Another Galaxy
-phone: (555) 555-5555
+     Nanaimo, British Columbia, V9T 6N7, Canada
+phone: (250) 756-7208
 email: csap@dfo-mpo.gc.ca
 output:
  csasdown::sr_pdf

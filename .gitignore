@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+_book/
+csas-style/
+sardinesr.Rproj
+sr.log
+sr.upa
