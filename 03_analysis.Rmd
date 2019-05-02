@@ -29,6 +29,8 @@ max_exp <- max(tac$bc_exploitation[!is.na(tac$bc_exploitation)])
 max_exp_year <- tac[which(tac$bc_exploitation == max_exp),]$year
 max_exp_catch <- f(max_exp)
 
+final_year <- max(tac$year)
+
 # Make catch and tac columns have commas and percent columns have 2 decimal places
 tac <- bind_cols(as_tibble(tac[1]),
                  as_tibble(apply(tac[-c(1, 6, 7)], c(1,2), f)),
@@ -43,10 +45,39 @@ names(tac) <- c("Year",
                 "BC Exploitation (%)")
 ```
 
-The commercial BC sardine fishery was reinitiated in 2002 following closure since 1947 [@ware1999; @dfo2012]. Most fishing occurred from July to October in association with seasonal sardine migratory behaviour [@dfo2012]. From 2002-2012, the annual total allowable catch (TAC), generally increased as a result of management decisions [@dfo2012]. Prior to 2008, landings were relatively low (less than 5,000 tonnes), but increased considerably from 2008-2012 (up to a maximum of `r max_bc_catch` tonnes in `r max_bc_catch_year`) but were zero in 2013 through to 2018 due to an apparent absence of Pacific Sardine in BC waters and fishery closures in 2015, 2016, 2017, and 2018 (Table \@ref(tab:tac-landings)). Since 2002, total landings of the northern subpopulation
+The commercial BC sardine fishery was reinitiated in 2002 following closure since 1947 [@ware1999; @dfo2012]. Most fishing occurred from July to October in association with seasonal sardine migratory behaviour [@dfo2012]. From 2002-2012, the annual total allowable catch (TAC), generally increased as a result of management decisions [@dfo2012]. Prior to 2008, landings were relatively low (less than 5,000 tonnes), but increased considerably from 2008-2012 (up to a maximum of `r max_bc_catch` t in `r max_bc_catch_year`) but were zero in 2013 through to 2018 due to an apparent absence of Pacific Sardine in BC waters and fishery closures in 2015, 2016, 2017, and 2018 (Table \@ref(tab:tac-landings)). Since 2002, total landings of the northern subpopulation
 (catches from BC, Washington, Oregon, California and Ensenada Mexico combined) were
-highest in `r max_tot_catch_year` at `r max_tot_catch` t. BC annual fishery exploitation rates were estimated as the annual fishery landings divided by the estimated age-1+ biomass in July for each year. Exploitation rate estimates on the stock due to fishing in BC waters show an increase from less than 1% prior to 2009 to a peak in `r max_exp_year` at `r max_exp`, followed by 0% thereafter (Table \@ref(tab:tac-landings)).
+highest in `r max_tot_catch_year` at `r max_tot_catch` t. BC annual fishery exploitation rates were estimated as the annual fishery landings divided by the estimated age-1+ biomass in July for each year. Exploitation rate estimates on the stock due to fishing in BC waters show an increase from less than 1% prior to 2009 to a peak in `r max_exp_year` at `r max_exp`%, followed by 0% thereafter (Table \@ref(tab:tac-landings)).
 
 ```{r tac-landings}
-csasdown::csas_table(tac)
+csasdown::csas_table(tac,
+                     align = c('c', 'r', 'r', 'r', 'r', 'r', 'r'),
+                     caption = paste0("A summary of recent Pacific Sardine fishery BC TAC, BC landings and total landings of the northern subpopulation for the west coast of North America (BC, Washington, Oregon, California and Ensenada Mexico). Also shown are [@hill2019] estimates of July age-1+ population biomass, coefficients of variation on biomass, and BC exploitation. Total landings for 2002-2005 are from @hill2016 and total landings for 2006-", final_year, " are from @hill2019. The", final_year, " total landings are preliminary. TAC, landings, and biomass values are in metric tonnes."))
 ```
+
+## Uncertainties
+
+Key uncertainties associated with the 2017 US Pacific Sardine assessment identified in @hill2019 and @punt2018 include information related to:
+
+1. Acoustic species identification, target strength estimation and spatial boundaries associated with the acoustic-trawl survey. Concern over poor near-shore survey coverage has also been expressed by representatives of the U.S and Canadian sardine fishing industry.
+
+2. Empirical weight-at-age data from the fishery and research survey samples and model
+characterization of population weight-at-age (e.g. time varying versus time-invariant)
+
+3. Age-length keys to convert acoustic-trawl survey length compositions to age compositions and selectivity parameterization for the acoustic-trawl survey
+
+4. Lack of empirical justification for increasing natural mortality from 0.4 to 0.6 yr-1
+
+5. Uncertainties and concerns identified in past DFO CSAS reviews related to BC Pacific Sardine fishery harvest advice (e.g. @dfo2013) include:
+
+  a. the effect of setting harvest allowances independently of the US and Mexico
+  
+  b. unknown effects on stock structure and reproductive capacity from fisheries in different regions targeting different age components of the population
+  
+  c. incidental capture of other species in the sardine fishery
+  
+  d. the effects of removing sardine from important forage habitat of sardine predators
+  
+## Harvest options
+
+The July `r curr_year` forecasted age-1+ biomass is `r b` tonnes, which is below the fishery cut-off of 150,000 tonnes. Based on the harvest control rule adopted in 2013, the current recommendation is that there should be no allowable fishery harvest, thus, a TAC of 0 tonnes is recommended for the fishing season starting in `r curr_year`.

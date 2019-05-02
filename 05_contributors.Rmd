@@ -1,12 +1,16 @@
 # Contributors
 
-Mandatory section and title.
-
 ```{r, echo=FALSE, include=FALSE}
 contributors <- tibble::tribble(
-  ~Name,          ~Affiliation,
-  "Jane Smith",   "DFO Science, Pacific Region",
-  "John Smith",   "DFO Science, Maritimes Region",
+  ~Name,                ~Affiliation,
+  "Linnea Flostrand",   "Author, DFO Science, Pacific Region",
+  "Chris Grandin",      "Author, DFO Science, Pacific Region",
+  "Jennifer Boldt",     "Author, DFO Science, Pacific Region",
+  "Bradley Langman",    "Reviewer, DFO Fisheries Management, Pacific Region",
+  "Brenda Spence",      "Reviewer, DFO Fisheries Management, Pacific Region",
+  "Larry Johnson",      "Reviewer, First Nation Sardine Association",
+  "Lorne Clayton",      "Reviewer, Canadian Pacific Sardine Association",
+  "Barron Carswell",    "Reviewer, Province of British Columbia"
 )
 ```
 

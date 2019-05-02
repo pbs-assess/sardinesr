@@ -1,4 +1,4 @@
 # Conclusions
 
-Mandatory section and title.
+It is recommended that there should be no allowable targeted harvest of Pacific Sardine in BC waters in `r curr_year`.
 
