@@ -1,12 +1,28 @@
 # Background
 
-Optional section.
+## Population assessment
 
-## Note on this section
+As stated above, the US NMFS assesses the status and population trends of the Pacific
+Sardine northern subpopulation in the eastern Pacific Ocean (also knowns as the California
+Current Ecosystem stock) using a Stock Synthesis model [@methot2013; @hill2019]. Since 2014, the annual Pacific Sardine stock assessment process has been conducted and updated in the spring. An update to the `r curr_year - 1` model was conducted in March `r curr_year`. The model is informed by data from a fishery-independent acoustic-trawl survey, fishery landings, and biological samples collected from 2005 to December of `r curr_year - 1` [@hill2019].
 
-This section can be used when it is considered necessary to add some background information to help the readers understand the nature of the issue to address (e.g., key information on the species, population, or area, or more details on the rationale for providing an answer to the request,).
-Science Response Reports are intended to be short. References to more background information may be added in the Sources of Information section.
+## BC Pacific Sardine fishery harvest control rule
 
-## Description of the fishery
+In 2013, DFO Fisheries Management adopted a harvest control rule that incorporates a July
+estimate (forecast) of the population’s age-1+ biomass, a cut-off value of 150,000 tonnes, and a harvest rate. The cut-off value of 150,000 tonnes is consistent with the cut-off value used in the US harvest guideline. The harvest rate is applied to the difference between the estimated age-1+ biomass and the cut-off. As described in the 2013 review [@dfo2013], a range in harvest rates (h) from 3-5% was selected in the calculation of potential harvest allowances. The equation for the calculation of a fishing season’s potential total allowable (TACt, tonnes) for a season starting in year $t$ is:
 
-Optional section for stock status updates, title may vary. 
+\begin{equation}
+TAC_t = h(B_{1+,t} - 150,000)
+\end{equation}
+
+where
+
+$h$ = harvest rate
+
+$B_{1+,t}$ = forecast age-1+ biomass (tonnes), July
+
+$150,000$ = cutoff value (tonnes)
+
+
+When the forecast of age-1+ biomass ($B_{1+,t}$) is less than 150,000 tonnes, the recommendation is that there should be no harvest. This SR provides the recommended `r curr_year` BC Pacific Sardine fishery harvest options based on the use of this harvest control rule and the `r curr_year` NOAA forecast for the stock’s July `r curr_year` age-1+ biomass.
+

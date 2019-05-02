@@ -1,6 +1,6 @@
 ---
-title: "HARVEST ADVICE FOR PACIFIC SARDINE (*SARDINOPS SAGAX*) IN BRITISH COLUMBIA WATERS FOR 2018 SEASON"
-title_short: "HARVEST ADVICE FOR PACIFIC SARDINE (*SARDINOPS SAGAX*) IN BRITISH COLUMBIA WATERS FOR 2018 SEASON"
+title: "HARVEST ADVICE FOR PACIFIC SARDINE (*SARDINOPS SAGAX*) IN BRITISH COLUMBIA WATERS FOR 2019 SEASON"
+title_short: "HARVEST ADVICE FOR PACIFIC SARDINE (*SARDINOPS SAGAX*) IN BRITISH COLUMBIA WATERS FOR 2019 SEASON"
 title_other: "Titre Ici (*Nom Latin*)"
 year: 2019
 month: May
@@ -66,7 +66,15 @@ knitr::opts_chunk$set(
 
 ```{r load-libraries, cache=FALSE}
 # add other packages here:
+library(dplyr)
 library(csasdown)
 library(lubridate)
+source(here::here("R", "utils.R"))
 curr_year <- year(Sys.Date())
+
+d <- readr::read_csv(here::here("data", "data.csv"))
+curr_vals <- d %>% 
+  filter(year == curr_year)
+b <- f(curr_vals$biomass_estimate)
+
 ```

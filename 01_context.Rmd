@@ -1,42 +1,15 @@
 # Context
 
-The northern subpopulation of Pacific Sardine (Sardinops sagax) in the eastern Pacific Ocean (California Current Ecosystem) has a distribution that can range between Baja California to southeast Alaska. In winter and spring months, most of this stock has the tendency to occur in waters off the California coast in association with spawning. Prior to, and during summer months, large aggregations of Pacific Sardine migrate from spawning habitat to more northern waters mainly to forage. Migratory patterns can be affected by age structure, population size and oceanographic conditions. Typically, most Pacific Sardine that migrate into British Columbia (BC) waters are the larger and older fish in the population. Pacific Sardine has not been fished in BC waters since 2012 due to reduced migration (a general absence of Pacific Sardine in BC waters) and formal fishery closures in 2015, 2016, 2017, and 2018.
+The northern subpopulation of Pacific Sardine (*Sardinops sagax*) in the eastern Pacific Ocean (California Current Ecosystem) has a distribution that can range between Baja California to southeast Alaska. In winter and spring months, most of this stock has the tendency to occur in waters off the California coast in association with spawning. Prior to, and during summer months, large aggregations of Pacific Sardine migrate from spawning habitat to more northern waters mainly to forage. Migratory patterns can be affected by age structure, population size and oceanographic conditions. Typically, most Pacific Sardine that migrate into British Columbia (BC) waters are the larger and older fish in the population. Pacific Sardine has not been fished in BC waters since 2012 due to reduced migration (a general absence of Pacific Sardine in BC waters) and formal fishery closures in 2015, 2016, 2017, and 2018.
 
-To calculate potential harvest options for the BC sardine fishery, Fisheries and Oceans Canada (DFO) adopted a harvest control rule in 2013 that applies a harvest rate to an estimate of age-1 year and older (age-1+) biomass that exceeds 150,000 t (DFO 2013). As described in the 2013 [Science Advisory Report](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/SAR-AS/2013/2013_037-eng.html), a range in harvest rates from 3-5% was selected to calculate potential harvest options. The age-1+ biomass estimate used in the harvest control rule is based on stock assessment efforts conducted by the United States (US) National Marine Fisheries Service (NMFS) of the National Oceanic and Atmospheric Administration (NOAA). An update to a 2017 stock assessment model of the northern subpopulation of Pacific Sardine was conducted by the US NMFS of NOAA in March 2018. Results from the 2018 update include information on stock status and forecasts of age1+ sardine biomass informed by data sets representing fishery landings, biological sample data and fishery independent surveys updated until December 2017 (described in Hill et al. 2018).
+To calculate potential harvest options for the BC sardine fishery, Fisheries and Oceans Canada (DFO) adopted a harvest control rule in 2013 that applies a harvest rate to an estimate of age-1 year and older (age-1+) biomass that exceeds 150,000 t (DFO 2013). As described in the 2013 [Science Advisory Report](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/SAR-AS/2013/2013_037-eng.html), a range in harvest rates from 3-5% was selected to calculate potential harvest options. The age-1+ biomass estimate used in the harvest control rule is based on stock assessment efforts conducted by the United States (US) National Marine Fisheries Service (NMFS) of the National Oceanic and Atmospheric Administration (NOAA). An update to a `r curr_year - 1` stock assessment model of the northern subpopulation of Pacific Sardine was conducted by the US NMFS of NOAA in March `r curr_year`. Results from the `r curr_year` update include information on stock status and forecasts of age-1+ sardine biomass informed by data sets representing fishery landings, biological sample data and fishery independent surveys updated until December `r curr_year - 1` [@hill2019].
 
-DFO Fisheries Management requested that DFO Science Branch incorporate the updated 2018 US stock assessment results into the 2013 BC fishery harvest control rule and provide harvest advice for Pacific Sardine for the 2018 season. Specifically, this Science Response (SR) provides information on the northern subpopulation of Pacific Sardine (associated with the California Current Ecosystem) to report on its biomass status, exploitation rates, commercial landings, and harvest options for the 2018 BC Pacific Sardine fishing season. Objectives of this report are to:
+DFO Fisheries Management requested that DFO Science Branch incorporate the updated `r curr_year` US stock assessment results into the 2013 BC fishery harvest control rule and provide harvest advice for Pacific Sardine for the `r curr_year` season. Specifically, this Science Response (SR) provides information on the northern subpopulation of Pacific Sardine (associated with the California Current Ecosystem) to report on its biomass status, exploitation rates, commercial landings, and harvest options for the `r curr_year` BC Pacific Sardine fishing season. Objectives of this report are to:
+
 1. Report the results of applying the harvest control rule for a range of harvest rates from 0.03 to 0.05 in increments of 0.01, if the expected stock biomass is above the escapement buffer of 150,000 tonnes.
+
 2. Identify uncertainties associated with harvest advice.
-A formal Canadian stock assessment will not be undertaken in 2018 and the following advice is based on a multi-year method approved in 2013. As such, for a full understanding of Science recommendations, uncertainties, and future considerations, readers are referred the 2013 Canadian Science Advisory Secretariat (CSAS) Science Advice Report (DFO 2013).
 
+A formal Canadian stock assessment will not be undertaken in `r curr_year` and the following advice is based on a multi-year method approved in 2013. As such, for a full understanding of Science recommendations, uncertainties, and future considerations, readers are referred the 2013 Canadian Science Advisory Secretariat (CSAS) Science Advice Report [@dfo2013].
 
-
-Mandatory section and title.
-
-## Note on this section
-
-The context section must give the readers a clear idea of the issue being addressed and of the history of how the need for this process came about (e.g., the rationale for using the Science Response Process in this specific case).
-It should include the formal request/question from the client, the response deadline, as well as a short summary of the conclusion (one or two sentences).
-
-The rationale for the approach taken to answer the request can be described (e.g., specific scientific questions that were addressed).
-This section could also include information on previous related meetings and advice on which this process is based.
-
-This section is not intended for detailed background information on the science issues themselves, but rather gives the bigger picture.
-At the end of this section, the reader will have a clear understanding of the reason to produce the report, will know how this specific report fits in the sequence of past advice, and what advice is expected to be produced in the future on this specific issue.
-
-If the objective of the process was to comment on a specific report (e.g., Environmental Assessment report produced by a proponent in the context of the Canadian Environmental Assessment Act) then the relevant link to the report that was the subject of the review could be identified in this section.
-
-This section will be posted in HTML format on the CSAS website followed by the link to the full PDF version of the publication.
-
-## Mandatory paragraph
-
-*The meeting date and title must be exactly as they appear on the Fisheries and Oceans Science Advisory Schedule.
-Be sure to use the default text in the French template for the translation as well as the meeting information on the French version of the schedule.
-Edit the following sentence as necessary.*
-
-This Science Response Report results from the Science Response Process Month Day, Year on the Title of Process Here.
-
-*Add the following sentence if there are other associated publications that will be posted on the schedule.*
-
-Additional publications from this meeting will be posted on the \href{http://www.isdm-gdsi.gc.ca/csas-sccs/applications/events-evenements/index-eng.asp}{DFO Science Advisory Schedule} as they become available.
-
+This Science Response Report results from the Science Response Process of May `r curr_year` on Harvest Advice for Pacific Sardine (*Sardinops sagax*) in British Columbia Waters for `r curr_year`.

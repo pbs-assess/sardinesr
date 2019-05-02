@@ -1,11 +1,52 @@
 # Analysis and response
 
-Mandatory section, title may vary.
+```{r estimates}
+d <- readr::read_csv(here::here("data", "data.csv"))
+curr_vals <- d %>% 
+  filter(year == curr_year)
+b <- f(curr_vals$biomass_estimate)
+```
 
-## Note on this section
+## Biomass
 
-This section is the core of the report.
+Estimates of the California Current Pacific Sardine age-1+ biomass showed a decreasing trend since 2006, reaching historically low levels in recent years [@hill2019]. Declines in recruitment have also occurred since 2005-06, with the exception of a brief period of modest recruitment success from 2009-10 [@hill2019] In particular, the 2011-18 year classes have been among the weakest in recent history. The age-1+ biomass maximum likelihood estimate for the July `r curr_year` forecast is `r b` tonnes [@hill2019].
 
-## Indicators of the stock status
+Few or no sardines have been observed in BC waters during 2013-`r curr_year - 1` in fisheries, surveys or other sources, suggesting curtailed migration and/or stock size. Average estimates of Pacific Sardine trawl catch densities (a catch per unit effort index) from a west coast of Vancouver Island summer pelagic ecosystem night trawl survey in 2006, and 2008-2014 show a decreasing trend from 2006 with no sardines observed the last two years the survey was conducted (2013 and 2014). During the summers of 2015 and 2016 sardines were detected off the west coast of Vancouver Island in trawl catches from other multi-species surveys (i.e. led by DFO or NOAA) but none were detected in 2017 or 2018.
 
-Mandatory section for stock status updates, title may vary.
+## BC fishery exploitation
+
+```{r calc-tac-landings}
+tac <- readr::read_csv(here::here("data", "tac-landings.csv"))
+max_bc_catch <- max(tac$bc_catch)
+max_bc_catch_year <- tac[which(tac$bc_catch == max_bc_catch),]$year
+max_bc_catch <- f(max_bc_catch)
+
+max_tot_catch <- max(tac$total_catch)
+max_tot_catch_year <- tac[which(tac$total_catch == max_tot_catch),]$year
+max_tot_catch <- f(max_tot_catch)
+
+max_exp <- max(tac$bc_exploitation[!is.na(tac$bc_exploitation)])
+max_exp_year <- tac[which(tac$bc_exploitation == max_exp),]$year
+max_exp_catch <- f(max_exp)
+
+# Make catch and tac columns have commas and percent columns have 2 decimal places
+tac <- bind_cols(as_tibble(tac[1]),
+                 as_tibble(apply(tac[-c(1, 6, 7)], c(1,2), f)),
+                 as_tibble(apply(tac[c(6,7)], c(1,2), f, 2)))
+tac <- as_tibble(apply(tac, c(1,2), function(x) gsub("NA", "--", x)))
+names(tac) <- c("Year",
+                "BC TAC",
+                "BC Landings",
+                "Total Landings",
+                "Biomass age-1+",
+                "CV age-1+",
+                "BC Exploitation (%)")
+```
+
+The commercial BC sardine fishery was reinitiated in 2002 following closure since 1947 [@ware1999; @dfo2012]. Most fishing occurred from July to October in association with seasonal sardine migratory behaviour [@dfo2012]. From 2002-2012, the annual total allowable catch (TAC), generally increased as a result of management decisions [@dfo2012]. Prior to 2008, landings were relatively low (less than 5,000 tonnes), but increased considerably from 2008-2012 (up to a maximum of `r max_bc_catch` tonnes in `r max_bc_catch_year`) but were zero in 2013 through to 2018 due to an apparent absence of Pacific Sardine in BC waters and fishery closures in 2015, 2016, 2017, and 2018 (Table \@ref(tab:tac-landings)). Since 2002, total landings of the northern subpopulation
+(catches from BC, Washington, Oregon, California and Ensenada Mexico combined) were
+highest in `r max_tot_catch_year` at `r max_tot_catch` t. BC annual fishery exploitation rates were estimated as the annual fishery landings divided by the estimated age-1+ biomass in July for each year. Exploitation rate estimates on the stock due to fishing in BC waters show an increase from less than 1% prior to 2009 to a peak in `r max_exp_year` at `r max_exp`, followed by 0% thereafter (Table \@ref(tab:tac-landings)).
+
+```{r tac-landings}
+csasdown::csas_table(tac)
+```
