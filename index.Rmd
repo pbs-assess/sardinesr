@@ -1,6 +1,6 @@
 ---
 title: "HARVEST ADVICE FOR PACIFIC SARDINE (*SARDINOPS SAGAX*) IN BRITISH COLUMBIA WATERS FOR 2019 SEASON"
-title_short: "Harvest Advice for Pacific Sardine in BC for the 2019 Season"
+title_short: "Harvest Advice for \\break Pacific Sardine in BC for the 2019 Season"
 title_other: "Avis sur les prélèvements de sardines du Pacifique (Sardinops sagax) dans les eaux de la Colombie-Britannique pour la saison 2019. Secr. can. de consult. sci. du MPO, Rép. des Sci. 2019/nnn."
 year: 2019
 month: May
